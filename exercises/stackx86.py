@@ -5,6 +5,10 @@ from tkinter import font
 
 
 GROWTH = {"dec":1, "inc":-1}
+REGISTER = {"EAX":4, "AX":2}
+
+EAX = 4 #bytes
+AX = 2 #bytes
 
 MINIMUM_ADDRESS = 0x0fffff05
 MAXIMUM_ADDRESS = 0x0ffffffa
@@ -17,24 +21,26 @@ class Simulator:
     def __init__(self, root):
         self.root = root
         self.root.title("Stacksim")
-        self.root.geometry("400x400")
+        self.root.geometry("640x480")
         self.root.configure(bg="light gray")
         self.growth = random.choice(list(GROWTH.keys()))
         custom_font = font.Font(family="Helvetica", size=16)
+        self.register = "EAX"
         self.adress_labels = []
         self.values_labels = []
         self.refresh_cells()
         self.refresh_values()
 
 
+
         for index, value in enumerate(self.cells):
             address_label = tk.Label(root, text=f"{value}:".upper(), padx=10, font=custom_font, width=8)
-            address_label.grid(row=index, column=0)
+            address_label.grid(row=index+1, column=0)
             self.adress_labels.append(address_label)
 
         for index, value in enumerate(self.values):
             value_label = tk.Label(root, text=f"{value}".upper(), padx=10, font=custom_font, width=5)
-            value_label.grid(row=index, column=1)
+            value_label.grid(row=index+1, column=1)
             self.values_labels.append(value_label)
 
         self.update_button = tk.Button(root, text="Next", command=self.update)
@@ -52,6 +58,9 @@ class Simulator:
         self.button = tk.Button(root, text="Submit", command=self.check)
         self.button.grid(row=9, column=3)
 
+        self.exercise_test_label = tk.Label(root, text=f"Stan bezposrednio po push EAX, \n jaka wartosc bedzie w EAX po wykonaniu pop EAX", padx=10, font=custom_font)
+        self.exercise_test_label.grid(row=10, column=0, columnspan=5)
+
     def check(self):
         user_input = self.entry.get().upper()
         resulting_string = "".join(self.answer).upper()
@@ -62,6 +71,12 @@ class Simulator:
         
 
     def update(self):
+        self.register = random.choice(list(REGISTER.keys()))
+        if REGISTER[self.register] == EAX:
+            self.exercise_test_label.config(text=f"Stan bezposrednio po push EAX, \n jaka wartosc bedzie w EAX po wykonaniu pop EAX")
+        else:
+            self.exercise_test_label.config(text=f"Stan bezposrednio po push AX, \n jaka wartosc bedzie w AX po wykonaniu pop AX")
+
         self.refresh_cells()
         for index, value in enumerate(self.cells):
             self.adress_labels[index].config(text=f"{value}".upper())
@@ -101,6 +116,10 @@ class Simulator:
             self.values =  self.answer  + hex_strings
         else:
             self.values =  hex_strings + self.answer[::-1]
+
+        if REGISTER[self.register] == AX:
+            self.answer = self.answer[-2::]
+
 
 
 
