@@ -3,7 +3,7 @@ import requests
 import tkinter as tk
 from tkinter import font
 
-BASE_URL = "http://127.0.0.1:8080/"
+BASE_URL = "http://34.17.58.255:8080/"
 GROWTH = {"dec": 1, "inc": -1}
 REGISTER = {"EAX": 4, "AX": 2}
 EAX = 4  # bytes

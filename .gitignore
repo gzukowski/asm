@@ -1,0 +1,37 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.pyc
+*.pyo
+*~
+
+# Python log files
+*.log
+
+# IDE-specific files and directories
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+
+# Local configuration files
+*.env
+
+# Compiled Python extensions
+*.pyd
+*.so
+*.dll
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Virtual environment directories
+venv/
+env/
+.venv/
+.ENV/
+
+# User-specific Python environments
+.venv/
+.ENV/
