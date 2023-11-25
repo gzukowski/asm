@@ -13,3 +13,6 @@ Number systems and dynamic data.
 
 # Lab4
 Mixed programming (.C)
+
+# Lab5
+Mixed programming and floats(.C)
