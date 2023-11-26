@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pliki źródłowe">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Pliki zasobów">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="kwadratowa.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="srednia_harm.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="e_do_x.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="5_2.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="xmmprzykladasm.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="5_3.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="5_4.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="5_5.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="5_6.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="oblicz_potege.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="find_max_range.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="cone_volume.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="tangens.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="dziel.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="mul_at_once.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+    <MASM Include="wyznacz_max.asm">
+      <Filter>Pliki źródłowe</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="srednia_harmC.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="5_2c.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="xmmprzyklad.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="5_3c.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="5_4c.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="5_5c.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="5_6c.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="oblicz_potegec.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="find_max_rangec.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="cone_volumec.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="dzielc.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="mul_at_oncec.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="wyznacz_maxc.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
