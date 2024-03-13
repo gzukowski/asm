@@ -31,7 +31,6 @@ class Simulator(tk.Tk):
         self.values_labels = []
         self.task_id = 0
 
-
         success = self.get_new_task()
 
         if not success:
@@ -79,13 +78,21 @@ class Simulator(tk.Tk):
     
         self.submit_button.config(state=tk.DISABLED, relief=tk.SUNKEN, background='gray')
     
-        response = requests.get(f"{BASE_URL}validate_answer", headers=headers, json=data)
+        response = requests.post(f"{BASE_URL}validate_answer", headers=headers, json=data)
 
         if response.status_code != 200:
-            
+            messagebox.showerror("Error", "Failed to submit answer, check internet.")
+            return None
+        
+        data = response.json()
 
+        if data["result"] == 1:
+            self.entry.config(bg="green")
 
+        if data["result"] == 0:
+            self.entry.config(bg="red")
 
+        
     def update(self):
         self.submit_button.config(state=tk.NORMAL, relief=tk.RAISED, background='SystemButtonFace')
 
@@ -109,7 +116,6 @@ class Simulator(tk.Tk):
         
         self.entry.delete(0, "end")
         self.entry.config(bg="white")
-
 
     def get_new_task(self):
         try:
