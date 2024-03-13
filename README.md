@@ -16,3 +16,7 @@ Mixed programming (.C)
 
 # Lab5
 Mixed programming and floats(.C)
+
+# Lab6
+Interrupts.
+
