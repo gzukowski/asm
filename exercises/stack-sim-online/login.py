@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import font
 from simulator import Simulator
 
-BASE_URL = "http://34.17.58.255:8080/"
+BASE_URL = "http://127.0.0.1:8080/"
 
 class StartWindow(tk.Tk):
     def __init__(self):
