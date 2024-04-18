@@ -2,8 +2,8 @@
 
 This repository contains a collection of solutions for my university's assignments.
 
-# Exercises
-Scripts for learning x86 behaviors.
+# Simulators
+Online and offline simulator of stack behavior.
 
 # Lab2
 Manipulation of data defined in a data segment.
